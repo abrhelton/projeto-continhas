@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rooboto Mono', monospace;
+    font-size: 25px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#cron {
+    background-color: #248a30;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.grid{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    max-width: 40%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    color: black;
+}
+
+footer p {
+    color: white;
+}
+footer button{
+    padding: 10px;
+    background-color: #248a30;
+    color: white;
+}
+
+.expression {
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.expression.right{
+    border: 2px solid #248a30;
+    color:  #248a30;
+}
+
+.expression.wrong{
+    border: 2px solid #c00202;
+    color: #c00202;
+}
+
+.expression p {
+    display: inline-block;
+}
+
+.expression input {
+    border: none;
+    outline: none;
+    width: 33px;
+}
+
