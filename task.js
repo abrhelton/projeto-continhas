@@ -636,7 +636,7 @@ function calcCombinationsSub(lvl) {
         case "lvl5":
         for (let i = 0; i < 5; i++) {
             // parcela1 = getRandomInt(100, 999);
-            parcela1 = getRandomInt(10000000, 99999999);
+            parcela1 = getRandomInt(10000000000, 99999999999);
             combinations.push([parcela1, getRandomInt(1000000, parcela1)]);
         }
         break;
