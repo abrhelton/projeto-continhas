@@ -1,84 +1,431 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* index */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rooboto Mono', monospace;
+    font-family: 'Rooboto Mono', sans-serif;
     font-size: 25px;
-}
-
-header {
-    background-color: black;
-    color: white;
-    margin-bottom: 20px;
-}
-
-#cron {
-    background-color: #248a30;
+    transition: .5s;
 }
 
 .container{
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+    align-items: center;
 }
 
-.grid{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    max-width: 60%;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: auto;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
+header {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    background-color: black;
-    padding: 10px;
+    padding: 10px 10%;
+}
+
+.home {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Rooboto Mono', monospace;
+    cursor: pointer;
+}
+
+.monospace {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Rooboto Mono', monospace;
+}
+
+/*
+####################################################################### 
+Navbar
+#######################################################################
+ */
+
+
+.nav__links li, .nav__links a, .nav__links button {
+    font-size: 20px;
     color: black;
+    text-decoration: none;
 }
 
-footer p {
-    color: white;
-}
-footer button{
-    padding: 10px;
-    background-color: #248a30;
-    color: white;
+.nav__links {
+    list-style: none;
 }
 
-.expression {
-    padding: 10px;
-    border: 2px solid black;
-}
-
-.expression.right{
-    border: 2px solid #248a30;
-    color:  #248a30;
-}
-
-.expression.wrong{
-    border: 2px solid #c00202;
-    color: #c00202;
-}
-
-.expression p {
+.nav__links li {
     display: inline-block;
+    padding: 0px 20px;
 }
 
-.expression input {
-    border: none;
-    outline: none;
-    width: 33px;
+.nav__links li a::after{
+    content: "";
+    background-color: black;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav .nav__links a:hover::after{
+    width: 100%;
+}
+
+header button {
+    padding: 9px 25px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+header button:hover {
+    border-color: #248a30;
+    color: #248a30;
+}
+
+
+/*
+####################################################################### 
+About
+#######################################################################
+ */
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about p{
+    text-align: left;
+    width: 100%;
+    font-size: 50px;
+}
+
+.about h1{
+    font-size: 150px;
+    width: 100%;
+}
+
+.objectives{
+    width: 100%;
+    margin: 100px auto;
+}
+
+.goal-specification{
+    text-align: center;
+}
+
+.goal-specification p{
+    font-size: 30px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.students-goals, .teachers-goals {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 40px 40px;
+    margin: 50px 50px;
+    width: 500px;
+    height: auto;
+}
+
+.students-goals li, .teachers-goals li{
+    font-size: 20px;
+}
+
+.students-goals li:first-child, .teachers-goals li:first-child {
+    list-style-type: none;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+/*
+####################################################################### 
+Task 
+#######################################################################
+ */
+
+
+.task h1{
+    display: block;
+    font-size: 150px;
+    width: 100%;
+    text-align: right;
+}
+
+.task .task-message {
+    width: 100%;
+    font-size: 50px;
+    text-align: right;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs {
+    position: relative;
+    left: -20%;
+    width: 80px;
+    padding: 40px 0;  
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+input {
+    appearance: none;
+    display: none;
+}
+
+.icon {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icon label {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin: auto;
+    font-size: 4em;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+input:nth-child(1):checked ~ .icon label:nth-child(1), 
+input:nth-child(2):checked ~ .icon label:nth-child(2), 
+input:nth-child(3):checked ~ .icon label:nth-child(3), 
+input:nth-child(4):checked ~ .icon label:nth-child(4) {
+    opacity: 1;
+} 
+
+.indicator {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 3px black solid;
+    border-right: white;
+
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    right: -3px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 15px;
+    border-right: 3px black solid;
+    border-bottom: 3px black solid;
+    box-shadow: 8px 8px 0 8px white;
+}
+
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    bottom: -23px;
+    right: -3px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 15px;
+    border-right: 3px black solid;
+    border-top: 3px black solid;
+    box-shadow: 8px -8px 0 8px white;
+}
+
+.hide-line {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -3px;
+    width: 5px;
+    height: 70px;
+    background: white;
+    z-index: 1;
+}
+
+.tabs input:nth-child(1):checked ~ .icon .indicator, 
+.tabs input:nth-child(1):checked ~ .icon .hide-line {
+    top: 0;
+}
+
+.tabs input:nth-child(2):checked ~ .icon .indicator,
+.tabs input:nth-child(2):checked ~ .icon .hide-line{
+    top: 25%;
+}
+
+.tabs input:nth-child(3):checked ~ .icon .indicator,
+.tabs input:nth-child(3):checked ~ .icon .hide-line{
+    top: 50%;
+}
+
+.tabs input:nth-child(4):checked ~ .icon .indicator,
+.tabs input:nth-child(4):checked ~ .icon .hide-line{
+    top: 75%;
+}
+
+
+input:nth-child(1):checked ~ .icon label[for="addition"],
+input:nth-child(2):checked ~ .icon label[for="subtraction"],
+input:nth-child(3):checked  ~ .icon label[for="multiplication"],
+input:nth-child(4):checked ~ .icon label[for="division"] {
+    animation: spin 1s ease-in-out forwards;
+    transform-origin: center;
+}
+
+#addlvl1:checked ~ .icon label[for="addition"]{
+    color: #0303fc;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 520px;
+    height: 400px;
+    border-radius: 20px;
+    border: 3px black solid;
+}
+
+.contentBx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contentBx .level{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.contentBx label {
+    cursor: pointer;
+}
+
+.tabs input:nth-child(1):checked ~ .content .contentBx:nth-child(1),
+.tabs input:nth-child(2):checked ~ .content .contentBx:nth-child(2),
+.tabs input:nth-child(3):checked ~ .content .contentBx:nth-child(3),
+.tabs input:nth-child(4):checked ~ .content .contentBx:nth-child(4) {
+    opacity: 1;
+    visibility: visible;    
+}
+
+.level #addlvl1:checked + label,
+.level #sublvl1:checked + label,
+.level #mullvl1:checked + label,
+.level #divlvl1:checked + label {
+    color: #0303fc;
+}
+
+
+.level #addlvl2:checked + label,
+.level #sublvl2:checked + label,
+.level #mullvl2:checked + label,
+.level #divlvl2:checked + label {
+    color: #03fce3;
+}
+
+.level #addlvl3:checked + label,
+.level #sublvl3:checked + label,
+.level #mullvl3:checked + label,
+.level #divlvl3:checked + label {
+    color: #03fc35;
+}
+
+.level #addlvl4:checked + label,
+.level #sublvl4:checked + label,
+.level #mullvl4:checked + label,
+.level #divlvl4:checked + label {
+    color: #ffde00;
+}
+
+.level #addlvl5:checked + label,
+.level #sublvl5:checked + label,
+.level #mullvl5:checked + label,
+.level #divlvl5:checked + label {
+    color: #ff9000;
+}
+
+.level #addlvl6:checked + label,
+.level #sublvl6:checked + label,
+.level #mullvl6:checked + label,
+.level #divlvl6:checked + label {
+    color: #ea00ff
+}
+
+.level #addlvl7:checked + label,
+.level #sublvl7:checked + label,
+.level #mullvl7:checked + label,
+.level #divlvl7:checked + label {
+    color: #fc0303;
+}
+
+.start-task {
+    padding: 9px 25px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.start-task:hover {
+    border-color: #248a30;
+    color: #248a30;
 }
 

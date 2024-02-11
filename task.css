@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rooboto Mono', monospace;
+    font-size: 25px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header p {
+    padding: 20px 0;
+}
+
+.monospace {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Rooboto Mono', monospace;
+}
+
+.lvl1 {
+    color: #0303fc;
+}
+
+.lvl2 {
+    color: #03fce3;
+}
+
+.lvl3 {
+    color: #03fc35;
+}
+
+.lvl4 {
+    color: #ffde00;
+}
+
+.lvl5 {
+    color: #ff9000;
+}
+
+.lvl6 {
+    color: #ea00ff
+}
+
+.lvl7 {
+    color: #fc0303;
+}
+
+#cron {
+    background-color: #248a30;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    color: black;
+}
+
+footer p {
+    color: white;
+}
+
+footer button{
+    padding: 10px;
+    background-color: #248a30;
+    color: white;
+}
+
+.expression {
+    border-radius: 10%;
+    padding: 20px 60px 20px 60px;
+    border: 6px solid black;
+    display: none;
+}
+
+.expression.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.parcela1, .parcela2, .answer, .carryOut, .borrowing, .parcela1 span {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 75px;
+}
+
+.parcela1 {
+    position: relative;
+}
+
+.hidden {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.visible{
+    position: absolute;
+    top: 0;
+    opacity: 0.75;
+    color: blue;
+}
+
+.question{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 75px;
+}
+
+.signal {
+    display: flex;
+    align-items: center;
+    font-size: 75px;
+    border-bottom: 6px solid black;
+
+}
+.parcela2{
+    border-bottom: 6px solid black;
+}
+
+.expression.right{
+    border-color:#248a30;
+}
+
+.expression.wrong{
+    border-color: #c00202;
+}
+
+.answer{
+    display: flex;
+    flex-direction: row;
+}
+
+.carryOut {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.answer input {
+    outline: none;
+    /*border: 3px solid black;*/
+    border: none;
+    font-size: 75px;
+    width: 41px;
+    margin: 0;
+    padding: 0;
+}
+
+.carryOut input {
+    outline: none;
+    /*border: 3px solid black;*/
+    border: none;
+    font-size: 75px;
+    width: 41px;
+    margin: 0;
+    padding: 0;
+}
+
+input.wrong {
+    color: #c00202;
+}
+
+.answer.right {
+    color: #248a30;
+}
+
+.carryOut.right {
+    color: #248a30;
+}

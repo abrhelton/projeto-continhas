@@ -5,22 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Continhas</title>
+    <title>continhas</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <p>Multiplicação | Nível 1</p>
-            <p id="cron">Tempo:</p>
+            <span class="home">continhas&lowbar;</span>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#task">Tarefa</a></li>
+                    <li><a href="#">Desempenho</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#"><button>Login</button></a>
         </header>
-        <div class="grid"></div>
-        <footer>
-            <p id="score"></p>
-            <button id="check-btn">Corrigir</button>
-            <button id="redo-btn">Novo exercício</button>
-            <button id="enviar-btn">Enviar</button>
-        </footer>
+        <section class="about">
+            <h1>Olá,</h1>
+            <p>seja muito bem-vindo!</p>
+            <div class="objectives">
+                <div class="goal-specification">
+                    <p>O objetivo desta ferramenta é auxiliar o ensino de matemática</p> 
+                    <p>básica contando com uma parceria entre estudantes e professores!</p>
+                </div>
+                <div class="cards">
+                        <ul class="students-goals">
+                            <li class="monospace">Estudantes&lowbar;</li>
+                            <li>Mais agilidade ao fazer contas</li>
+                            <li>Consolidação da memória</li>
+                            <li>Menos erros durante cálculos</li>
+                            <li>Prática tantas vezes quanto necessárias</li>
+                            <li>Digitar em vez de escrever foca melhoria do raciocínio em si</li>
+                        </ul>
+                        <ul class="teachers-goals">
+                            <li class="monospace">Professores&lowbar;</li>
+                            <li>Correção automatizada</li>
+                            <li>Identificação pontos de dificuldade</li>
+                            <li>Aleatorização númerica dos exercícios</li>
+                            <li>Nivelamento da dificuldade</li>
+                            <li>Atividades podem entrar na composição da nota</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+        <section class="task" id="task">
+            <h1>Escolha</h1>
+            <p class="task-message">uma operação e uma dificuldade</p>
+            <div class="tabs">
+                <input type="radio" id="addition" name="operation" checked>
+                <input type="radio" id="subtraction" name="operation">
+                <input type="radio" id="multiplication" name="operation">
+                <input type="radio" id="division" name="operation">
+                <div class="icon">
+                    <label for="addition">&plus;</label>
+                    <label for="subtraction">&minus;</label>
+                    <label for="multiplication">&times;</label>
+                    <label for="division">&divide;</label>
+                    <div class="indicator"></div>
+                    <div class="hide-line"></div>
+                </div>
+                <div class="content">
+                    <div class="contentBx" for="addition">
+                        <div class="level">
+                            <input type="radio" id="addlvl1" name="lvl">
+                            <label for="addlvl1" class="monospace">Nível 1</label>
+                            <p class="monospace">&quest; &plus; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="addlvl2" name="lvl">
+                            <label for="addlvl2" class="monospace">Nível 2</label>
+                            <p class="monospace">&quest;&quest; &plus; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="addlvl3" name="lvl">
+                            <label for="addlvl3" class="monospace">Nível 3</label>
+                            <p class="monospace">&quest;&quest; &plus; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="addlvl4" name="lvl">
+                            <label for="addlvl4" class="monospace">Nível 4</label>
+                            <p class="monospace">&quest;&quest;&quest; &plus; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="addlvl5" name="lvl">
+                            <label for="addlvl5" class="monospace">Nível 5</label>
+                            <p class="monospace">&quest;&quest;&quest; &plus; &quest;&quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="addlvl6" name="lvl">
+                            <label for="addlvl6" class="monospace">Nível 6</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &plus; &quest;&quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="addlvl7" name="lvl">
+                            <label for="addlvl7" class="monospace">Nível 7</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &plus; &quest;&quest;&quest;&quest;</p>
+                        </div>
+                    </div>
+                    <div class="contentBx" for="subtraction">
+                        <div class="level">
+                            <input type="radio" id="sublvl1" name="lvl">
+                            <label for="sublvl1" class="monospace">Nível 1</label>
+                            <p class="monospace">&quest;&quest; &minus; &quest; e &quest; &minus; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="sublvl2" name="lvl">
+                            <label for="sublvl2" class="monospace">Nível 2</label>
+                            <p class="monospace">&quest;&quest; &minus; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="sublvl3" name="lvl">
+                            <label for="sublvl3" class="monospace">Nível 3</label>
+                            <p class="monospace">&quest;&quest; &minus; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="sublvl4" name="lvl">
+                            <label for="sublvl4" class="monospace">Nível 4</label>
+                            <p class="monospace">&quest;&quest;&quest; &minus; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="sublvl5" name="lvl">
+                            <label for="sublvl5" class="monospace">Nível 5</label>
+                            <p class="monospace">&quest;&quest;&quest; &minus; &quest;&quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="sublvl6" name="lvl">
+                            <label for="sublvl6" class="monospace">Nível 6</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &minus; &quest;&quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="sublvl7" name="lvl">
+                            <label for="sublvl7" class="monospace">Nível 7</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &minus; &quest;&quest;&quest;&quest;</p>
+                        </div>
+                    </div>
+                    <div class="contentBx" for="multiplication">
+                        <div class="level">
+                            <input type="radio" id="mullvl1" name="lvl">
+                            <label for="mullvl1" class="monospace">Nível 1</label>
+                            <p class="monospace">&quest; &times; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="mullvl2" name="lvl">
+                            <label for="mullvl2" class="monospace">Nível 2</label>
+                            <p class="monospace">&quest;&quest; &times; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="mullvl3" name="lvl">
+                            <label for="mullvl3" class="monospace">Nível 3</label>
+                            <p class="monospace">&quest;&quest; &times; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="mullvl4" name="lvl">
+                            <label for="mullvl4" class="monospace">Nível 4</label>
+                            <p class="monospace">&quest;&quest;&quest; &times; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="mullvl5" name="lvl">
+                            <label for="mullvl5" class="monospace">Nível 5</label>
+                            <p class="monospace">&quest;&quest;&quest; &times; &quest;&quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="mullvl6" name="lvl">
+                            <label for="mullvl6" class="monospace">Nível 6</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &times; &quest;&quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="mullvl7" name="lvl">
+                            <label for="mullvl7" class="monospace">Nível 7</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &times; &quest;&quest;&quest;&quest;</p>
+                        </div>
+                     </div>
+                    <div class="contentBx" for="division">
+                        <div class="level">
+                            <input type="radio" id="divlvl1" name="lvl">
+                            <label for="divlvl1" class="monospace">Nível 1</label>
+                            <p class="monospace">&quest; &divide; &quest; e &quest;&quest; &divide; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="divlvl2" name="lvl">
+                            <label for="divlvl2" class="monospace">Nível 2</label>
+                            <p class="monospace">&quest;&quest;&quest; &divide; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="divlvl3" name="lvl">
+                            <label for="divlvl3" class="monospace">Nível 3</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &divide; &quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="divlvl4" name="lvl">
+                            <label for="divlvl4" class="monospace">Nível 4</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest; &divide; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="divlvl5" name="lvl">
+                            <label for="divlvl5" class="monospace">Nível 5</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest;&quest; &divide; &quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="divlvl6" name="lvl">
+                            <label for="divlvl6" class="monospace">Nível 6</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest;&quest;&quest; &divide; &quest;&quest;&quest;</p>
+                        </div>
+                        <div class="level">
+                            <input type="radio" id="divlvl7" name="lvl">
+                            <label for="divlvl7" class="monospace">Nível 7</label>
+                            <p class="monospace">&quest;&quest;&quest;&quest;&quest;&quest;&quest; &divide; &quest;&quest;&quest;&quest;</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <button class="start-task" onclick="taskPage()">Iniciar tarefa</button>
+        <section class="contact" id="contact">
+            
+        </section>
     </div>
-    <script src="index.js"></script>
+
+    <script>
+    function taskPage() {
+        var option = document.querySelector('input[name="lvl"]:checked');
+        window.location.href = "task.html?id=" + option.id; 
+    }</script>
 </body>
 </html>
